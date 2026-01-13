@@ -1,0 +1,49 @@
+# ===============================
+# Core App
+# ===============================
+streamlit
+altair
+
+# ===============================
+# TensorFlow / Keras (STRICT)
+# ===============================
+tensorflow-intel
+keras
+
+# ===============================
+# NLP / Embeddings
+# ===============================
+sentence-transformers
+transformers
+tokenizers
+huggingface_hub
+
+# ===============================
+# Torch (CPU)
+# ===============================
+torch
+
+# ===============================
+# Vector Store
+# ===============================
+faiss-cpu
+
+# ===============================
+# Numeric Stack (TF-compatible)
+# ===============================
+numpy
+scipy
+scikit-learn
+pandas
+
+# ===============================
+# PDF Handling
+# ===============================
+PyPDF2
+pdfminer.six
+
+# ===============================
+# Utilities
+# ===============================
+requests
+typing-extensions

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+venv/
+
+# Streamlit
+.streamlit/
+
+# Models (large files)
+*.h5
+*.keras
+
+# Data
+data/
+Imageset/
+
+# OS
+.DS_Store
+Thumbs.db

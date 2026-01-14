@@ -1,13 +1,11 @@
 import re
-import numpy as np
 from Name import fulltext_1, fulltext_2, fulltext_3
+import torch
 from sentence_transformers import SentenceTransformer
 from sklearn.preprocessing import normalize
 
 
 def improved_chunk(fulltext, chunk_size=1200, overlap_sentences=2):
-    """Sentence-aware chunking with sentence overlap"""
-
     sentences = re.split(r'(?<=[.!?])\s+', fulltext)
 
     chunks = []
@@ -17,8 +15,6 @@ def improved_chunk(fulltext, chunk_size=1200, overlap_sentences=2):
     for sentence in sentences:
         if current_len + len(sentence) > chunk_size and current:
             chunks.append(" ".join(current))
-
-            # sentence-level overlap
             current = current[-overlap_sentences:]
             current_len = sum(len(s) for s in current)
 
@@ -31,17 +27,9 @@ def improved_chunk(fulltext, chunk_size=1200, overlap_sentences=2):
     return chunks
 
 
-# -------------------------------
-# Chunking
-# -------------------------------
-
 text_chunks_1 = improved_chunk(fulltext_1)
 text_chunks_2 = improved_chunk(fulltext_2)
 text_chunks_3 = improved_chunk(fulltext_3)
-
-# -------------------------------
-# Embedding (BATCHED)
-# -------------------------------
 
 sentence_model = SentenceTransformer("all-MiniLM-L6-v2")
 
@@ -66,9 +54,6 @@ embeddings_3 = sentence_model.encode(
     convert_to_numpy=True
 )
 
-# -------------------------------
-# Normalize for cosine similarity
-# -------------------------------
 
 embeddings_1 = normalize(embeddings_1)
 embeddings_2 = normalize(embeddings_2)

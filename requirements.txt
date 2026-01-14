@@ -7,8 +7,7 @@ altair
 # ===============================
 # TensorFlow / Keras (STRICT)
 # ===============================
-tensorflow-intel
-keras
+tensorflow
 
 # ===============================
 # NLP / Embeddings

@@ -1,4 +1,3 @@
-# Apple Disease Detection & Prevention Advisory System
 
 ## Overview
 This project is a computer vision–based system that detects apple surface conditions from images and provides concise, document-grounded guidance on causes and prevention.  
@@ -23,8 +22,8 @@ This system bridges that gap by pairing **visual detection** with **retrieval-ba
 - Brown Rot  
 - Overripe  
 - Unripe  
-- Red Delicious
-- Fuji
+- Perfect Ripe
+- Variant fruit
 
 
 ## Tech Stack

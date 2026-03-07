@@ -5,7 +5,7 @@ protobuf==3.20.3
 
 # Streamlit
 streamlit==1.9.0
-altair
+altair==4.2.2
 pydeck
 validators
 gitpython

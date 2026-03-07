@@ -1,5 +1,5 @@
 # Core
-numpy
+numpy==1.24.3
 pandas
 protobuf==3.20.3
 
@@ -12,10 +12,10 @@ gitpython
 watchdog
 
 # TensorFlow (Windows) - must all be pinned together
-tensorflow-intel
-keras
-tensorflow-estimator
-tensorboard
+tensorflow==2.13.0
+keras==2.13.1
+tensorflow-estimator==2.13.0
+tensorboard==2.13.0
 
 # PyTorch - must be pinned together
 torch

@@ -8,11 +8,11 @@ import json
 from vector_base import vector_db_1, vector_db_2, vector_db_3
 
 sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
-model = tf.keras.models.load_model("D:\AppleProject\my_model (1).keras")
+model = tf.keras.models.load_model("my_model (1).keras")
 
 
-train_path = 'D:\AppleProject\Imageset\Train_set'
-test_path = 'D:\AppleProject\Imageset\Test_set'
+train_path = '\Imageset\Train_set'
+test_path = '\Imageset\Test_set'
 IMG_SIZE = 224
 BATCH_SIZE = 16   
 NUM_CLASSES = 6

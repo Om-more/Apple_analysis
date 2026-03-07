@@ -1,13 +1,16 @@
 import PyPDF2
 import warnings
 import logging
+import os
 
 warnings.filterwarnings('ignore', category=UserWarning, module='PyPDF2')
 logging.getLogger('PyPDF2').setLevel(logging.ERROR)
 
-pdf_file_1 = open('D:\AppleProject\Knowledge\Brown rot_ Causes, Symptoms &amp; Control _ RHS Advice.pdf (1).pdf','rb')
-pdf_file_2 = open('D:\AppleProject\Knowledge\R. K. Prasad, et al (1).pdf','rb')
-pdf_file_3 = open('D:\AppleProject\Knowledge\Apple scab _ Pome fruits _ Fruit and nut diseases _ Plant diseases _ Biosecurity _ Agriculture Victoria (1).pdf','rb')
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+pdf_file_1 = open(os.path.join(BASE_DIR, 'Knowledge', 'Brown rot_ Causes, Symptoms &amp; Control _ RHS Advice.pdf (1).pdf'), 'rb')
+pdf_file_2 = open(os.path.join(BASE_DIR, 'Knowledge', 'R. K. Prasad, et al (1).pdf'), 'rb')
+pdf_file_3 = open(os.path.join(BASE_DIR, 'Knowledge', 'Apple scab _ Pome fruits _ Fruit and nut diseases _ Plant diseases _ Biosecurity _ Agriculture Victoria (1).pdf'), 'rb')
 
 pdf_read_1 = PyPDF2.PdfReader(pdf_file_1)
 fulltext_1 = ""

@@ -1,48 +1,46 @@
-# ===============================
-# Core App
-# ===============================
+# Core
+numpy
+pandas
+protobuf
+
+# Streamlit
 streamlit
 altair
+pydeck
+validators
+gitpython
+watchdog
 
-# ===============================
-# TensorFlow / Keras (STRICT)
-# ===============================
-tensorflow
+# TensorFlow (Windows) - must all be pinned together
+tensorflow-intel
+keras
+tensorflow-estimator
+tensorboard
 
-# ===============================
-# NLP / Embeddings
-# ===============================
+# PyTorch - must be pinned together
+torch
+torchvision
+
+# RAG / NLP - must all be pinned together
 sentence-transformers
 transformers
 tokenizers
-huggingface_hub
-
-# ===============================
-# Torch (CPU)
-# ===============================
-torch
-
-# ===============================
-# Vector Store
-# ===============================
+huggingface-hub
+safetensors
 faiss-cpu
+sentencepiece
+nltk
 
-# ===============================
-# Numeric Stack (TF-compatible)
-# ===============================
-numpy
-scipy
+# ML
 scikit-learn
-pandas
+scipy
 
-# ===============================
-# PDF Handling
-# ===============================
-PyPDF2
+# PDF
 pdfminer.six
+PyPDF2
 
-# ===============================
-# Utilities
-# ===============================
+# Utils
+pillow
 requests
-typing-extensions
+tqdm
+pyyaml

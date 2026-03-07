@@ -18,14 +18,14 @@ tensorflow-estimator==2.13.0
 tensorboard==2.13.0
 
 # PyTorch - must be pinned together
-torch
-torchvision
+torch==2.1.2
+torchvision==0.16.2
 
 # RAG / NLP - must all be pinned together
-sentence-transformers
-transformers
-tokenizers
-huggingface-hub
+sentence-transformers==2.2.2
+transformers==4.30.2
+tokenizers==0.13.3
+huggingface-hub==0.14.1
 safetensors
 faiss-cpu
 sentencepiece

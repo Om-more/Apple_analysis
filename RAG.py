@@ -5,11 +5,15 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 import requests
 import json
+import os
 from vector_base import vector_db_1, vector_db_2, vector_db_3
 
 sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
 model = tf.keras.models.load_model("my_model (1).keras")
 
+model.save("my_model.h5")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model = tf.keras.models.load_model(os.path.join(BASE_DIR, "my_model.h5"))
 
 train_path = '\Imageset\Train_set'
 test_path = '\Imageset\Test_set'
